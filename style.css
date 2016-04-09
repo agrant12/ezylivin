@@ -17,85 +17,85 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* =WordPress Core
 -------------------------------------------------------------- */
 .alignnone {
-    margin: 5px auto 20px 0;
+	margin: 5px auto 20px 0;
 }
 
 .aligncenter,
 div.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
+	display: block;
+	margin: 5px auto 5px auto;
 }
 
 .alignright {
-    float:right;
-    margin: 5px 0 20px 20px;
+	float:right;
+	margin: 5px 0 20px 20px;
 }
 
 .alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
+	float: left;
+	margin: 5px 20px 20px 0;
 }
 
 a img.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
+	float: right;
+	margin: 5px 0 20px 20px;
 }
 
 a img.alignnone {
-    margin: 5px 20px 20px 0;
+	margin: 5px 20px 20px 0;
 }
 
 a img.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
+	float: left;
+	margin: 5px 20px 20px 0;
 }
 
 a img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
+	display: block;
+	margin-left: auto;
+	margin-right: auto
 }
 
 .wp-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    max-width: 96%; /* Image does not overflow the content area */
-    padding: 5px 3px 10px;
-    text-align: center;
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	max-width: 96%; /* Image does not overflow the content area */
+	padding: 5px 3px 10px;
+	text-align: center;
 }
 
 .wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
+	margin: 5px 20px 20px 0;
 }
 
 .wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
+	margin: 5px 20px 20px 0;
 }
 
 .wp-caption.alignright {
-    margin: 5px 0 20px 20px;
+	margin: 5px 0 20px 20px;
 }
 
 .wp-caption img {
-    border: 0 none;
-    height: auto;
-    margin: 0;
-    max-width: 98.5%;
-    padding: 0;
-    width: auto;
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
 }
 
 .wp-caption p.wp-caption-text,
 .gallery-caption {
-    font-size: 11px;
-    line-height: 17px;
-    margin: 0;
-    padding: 0 4px 5px;
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
 }
 
 .gallery-item img {
-    border-width: 1px;
-    margin-bottom: 0;
+	border-width: 1px;
+	margin-bottom: 0;
 }
 
 .wp-post-image {
@@ -117,8 +117,8 @@ a img.aligncenter {
 }
 
 .widget ul {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 #searchsubmit {
@@ -138,7 +138,7 @@ a img.aligncenter {
 	.comment-list, 
 	.children:nth-child(n+1) {
 		padding: 0;
-  	} 
+	} 
 }
 
 /* Text meant only for screen readers. */
@@ -170,3 +170,40 @@ a img.aligncenter {
 	z-index: 100000; /* Above WP toolbar. */
 }
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,400italic,800);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* Menu */
+
+.navbar-inverse {
+	background-color: white;
+	border-bottom: 1px solid #ccc;
+	font-family: 'Open Sans';
+	font-size: 12px;
+	left: 0;
+	letter-spacing: 8px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	padding: 10px 40px 10px 0;
+}
+
+/* Logo */
+.blog-title {
+	margin: 70px 0;
+	text-align: center;
+}
+
+.navbar-brand {
+	display: none;
+}

@@ -66,10 +66,10 @@
       <div class="container" <?php if ( get_header_image() ) : ?>style="height: auto; min-height: <?php echo HEADER_IMAGE_HEIGHT; ?>px; position: relative;"<?php endif; ?>>
         <?php if ( display_header_text() ) : ?>
         <?php $header_text_color = get_header_textcolor(); ?>
-        <h1 class="blog-title" style="color: #<?php echo $header_text_color ?>;"><?php bloginfo( 'name' ); ?></h1>
+        <h1 class="blog-title" style="color: #<?php echo $header_text_color ?>;"><a href="<?php echo home_url('/'); ?>"><?php bloginfo( 'name' ); ?></a></h1>
         <p class="lead blog-description" style="color: #<?php echo $header_text_color ?>"><?php bloginfo( 'description' ); ?></p>
         <?php else : ?>
-        <h1 class="blog-title" style="visibility: hidden; margin: 0; padding: 0; font-size: 0;"><?php bloginfo( 'name' ); ?></h1>
+        <!--<h1 class="blog-title"><a href="<?php echo home_url('/'); ?>"><?php bloginfo( 'name' ); ?></a></h1>-->
         <p class="lead blog-description" style="visibility: hidden; margin: 0; padding: 0; font-size: 0;"><?php bloginfo( 'description' ); ?></p>
         <?php endif; ?>
       </div>
