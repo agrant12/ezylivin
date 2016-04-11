@@ -283,8 +283,17 @@ body {
 
 /* Logo */
 .blog-title {
+	background: url(img/branding.png) no-repeat center;
+	height: 130px;
 	margin: 70px 0;
 	text-align: center;
+	text-indent: -5000px;
+}
+
+.blog-title a {
+	display: block;
+	height: 100%;
+	width: 100%;
 }
 
 .navbar-brand {
