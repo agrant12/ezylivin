@@ -102,6 +102,88 @@ a img.aligncenter {
 	margin-bottom: 20px;
 }
 
+.blog-image {
+	display: block;
+	height: 250px;
+	float: left;
+	margin-right: 15px;
+	overflow: hidden;
+	width: 65%;
+}
+
+.blog-image img {
+	height: auto;
+	width: 100%;
+}
+
+.blog-post {
+	overflow: auto;
+}
+
+.blog-post-title {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.blog-post-title a {
+	color: black;
+}
+
+.blog-post-title a:hover {
+	text-decoration: none;
+}
+
+.category-underline {
+	background-color: #dbbdba;
+	display: block;
+	height: 3px;
+	width: 50px;
+}
+
+.blogroll-info {
+	float: left;
+}
+
+/* Read More Button */
+.read-more {
+	border: 1px solid #dbbdba;
+	color: #dbbdba;
+	padding: 3px;
+	width: 72px;
+}
+
+.read-more a {
+	color: #dbbdba;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.read-more:hover, .read-more a:hover {
+	background-color: #dbbdba;
+	color: white;
+	text-decoration: none;
+}
+
+.front-glyphicon {
+	font-family: 'Open Sans';
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.front-glyphicon a {
+	color: #666;
+}
+
+.front-glyphicon a:hover {
+	text-decoration: none;
+}
+
+.thumbnail {
+	border: 0;
+	padding: 0;
+}
+
 .sticky {
 }
 
@@ -109,6 +191,7 @@ a img.aligncenter {
 }
 
 .entry {
+	font-size: 12px;
 	margin-bottom: 20px;
 }
 
