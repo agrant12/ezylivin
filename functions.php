@@ -123,6 +123,8 @@ function bootstrapcanvaswp_setup() {
 add_action( 'after_setup_theme', 'bootstrapcanvaswp_setup' );
 endif;
 
+include(dirname(__FILE__).'/plugins/spotlight/spotlight.php');
+
 /**
  * Enqueue scripts and styles for front-end.
  *
@@ -1114,5 +1116,3 @@ function bootstrapcanvaswp_comment( $comment, $args, $depth ) {
   endswitch; // end comment_type check
 }
 endif;
-
-include(dirname(__FILE__).'/plugins/spotlight/spotlight.php');
