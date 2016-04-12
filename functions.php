@@ -1114,3 +1114,5 @@ function bootstrapcanvaswp_comment( $comment, $args, $depth ) {
   endswitch; // end comment_type check
 }
 endif;
+
+include(dirname(__FILE__).'/plugins/spotlight/spotlight.php');
