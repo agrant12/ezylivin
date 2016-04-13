@@ -124,6 +124,8 @@ add_action( 'after_setup_theme', 'bootstrapcanvaswp_setup' );
 endif;
 
 include(dirname(__FILE__).'/plugins/spotlight/spotlight.php');
+include(dirname(__FILE__).'/plugins/social-media/social-media.php');
+
 
 /**
  * Enqueue scripts and styles for front-end.
@@ -1116,3 +1118,8 @@ function bootstrapcanvaswp_comment( $comment, $args, $depth ) {
   endswitch; // end comment_type check
 }
 endif;
+
+// Check if url is valid
+function is_valid_url($url) {
+	return preg_match('/^http(s)?:\/\/[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(\/.*)?$/i', $url);
+}

@@ -27,7 +27,7 @@
 .slide_info {
 	position: absolute;
 	text-align: center;
-	top: 28%;
+	top: 200px;
 	width: 100%;
 	z-index: 10;
 }
@@ -56,6 +56,6 @@ a.title_slide:hover {
 }
 
 .flex-direction-nav a:before {
-	color: #dbbdba;
+	color: white;
 	font-size: 30px;
 }

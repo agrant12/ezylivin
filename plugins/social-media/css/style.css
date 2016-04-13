@@ -1,0 +1,29 @@
+.social {
+	margin: 0 auto;
+	width: 190px;
+}
+
+.social li {
+	float: left;
+	font-size: 13px;
+	list-style: none;
+	margin-right: 5px;
+}
+
+.social li a {
+	color: black;
+}
+
+.social li a:hover {
+	color: #dbbdba;
+	text-decoration: none;
+}
+
+.blog-footer .social li {
+	margin-right: 13px;
+}
+
+.navbar .social {
+	float: right;
+	margin: -25px auto 0;
+}
