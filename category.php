@@ -6,20 +6,17 @@
  * @since Bootstrap Canvas WP 1.0
  */
 
-	get_header(); ?>
+get_header(); ?>
 
-      <div class="row">
+<div class="row">
+	<h1 class="category-header"><?php printf( __( '%s', 'bootstrapcanvaswp' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+	<div class="col-sm-8 blog-main">
+		<!--<hr />-->
+		<?php get_template_part( 'loop', 'category' ); ?>
+	</div><!-- /.blog-main -->
 
-        <div class="col-sm-8 blog-main">
+	<?php get_sidebar(); ?>
 
-          <h1><?php printf( __( 'Category Archives: %s', 'bootstrapcanvaswp' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
-		  <hr />
-		  <?php get_template_part( 'loop', 'category' ); ?>
+</div><!-- /.row -->
 
-        </div><!-- /.blog-main -->
-
-        <?php get_sidebar(); ?>
-
-      </div><!-- /.row -->
-      
-	<?php get_footer(); ?>
+<?php get_footer(); ?>
