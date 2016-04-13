@@ -45,6 +45,7 @@
           </button>
           <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
         </div>
+
 		<?php
           wp_nav_menu( array(
             'menu'              => 'primary',
@@ -58,6 +59,7 @@
             'walker'            => new wp_bootstrap_navwalker())
           );
         ?><!--/.nav-collapse -->
+        <?php social_media_widget(); ?>
       </div>
     </nav>
     

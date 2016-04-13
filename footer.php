@@ -22,6 +22,7 @@
       <?php else: ?>
       <p class="copyright"><?php _e( 'Blog template built for <a href="' . esc_url( 'http://getbootstrap.com', 'bootstrapcanvaswp' ) . '">Bootstrap</a> by <a href="' . esc_url( 'https://twitter.com/mdo', 'bootstrapcanvaswp' ) . '">@mdo</a>' ); ?></p>
       <?php endif; ?>
+      <?php social_media_widget(); ?>
       <p>
         <a href="#"><?php _e( 'Back to top', 'bootstrapcanvaswp' ); ?></a>
       </p>
