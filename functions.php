@@ -355,6 +355,7 @@ class Bootstrap_Canvas_WP_Customize {
 			  'times new roman, times, serif'                    => 'Times New Roman',
 			  'trebuchet ms, helvetica, sans-serif'              => 'Trebuchet MS',
 			  'verdana, geneva, sans-serif'                      => 'Verdana',
+			  'open sans, sans-serif'							=> 'Open Sans',
 		    )
          ) 
       ) );
@@ -394,6 +395,7 @@ class Bootstrap_Canvas_WP_Customize {
 			  'times new roman, times, serif'                    => 'Times New Roman',
 			  'trebuchet ms, helvetica, sans-serif'              => 'Trebuchet MS',
 			  'verdana, geneva, sans-serif'                      => 'Verdana',
+			  'open sans, sans-serif'							=> 'Open Sans',
 		    )
          ) 
       ) );
@@ -433,6 +435,7 @@ class Bootstrap_Canvas_WP_Customize {
 			  'times new roman, times, serif'                    => 'Times New Roman',
 			  'trebuchet ms, helvetica, sans-serif'              => 'Trebuchet MS',
 			  'verdana, geneva, sans-serif'                      => 'Verdana',
+			  'open sans, sans-serif'							=> 'Open Sans',
 		    )
          ) 
       ) );
