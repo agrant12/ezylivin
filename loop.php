@@ -23,9 +23,16 @@
 	  $date_format = get_option( 'date_format' );
 	  ?>
 	  <div class="blog-post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	  	<?php if ( has_post_format( 'video' )) {} ?>
 		<!-- check if the post has a Post Thumbnail assigned to it. -->
 		<?php if ( is_singular() && has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'full' ); ?>
+			<h2 class="blog-post-title single-title"><?php the_title(); ?></a></h2>
+			<div class="meta">
+				<?php the_time( $date_format ) ?>
+				<span>/</span>
+				<span class="glyphicon"></span> <?php comments_popup_link( __( 'No Comments', 'bootstrapcanvaswp' ), __( '1 Comment', 'bootstrapcanvaswp' ), __( '% Comments', 'bootstrapcanvaswp' ) ); ?>
+			</div>
+		<?php the_post_thumbnail( 'full' ); ?>
 		<?php elseif ( has_post_thumbnail() ) : ?>
 			<a class="blog-image" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 				<?php the_post_thumbnail( 'full' ); ?>
@@ -38,8 +45,8 @@
 				<h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e( 'Permanent Link to ', 'bootstrapcanvaswp' ) . esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h2>
 				<?php get_template_part( 'excerpt', get_post_format() ); ?>
 			</div>
-		<?php else : ?>
-			<h2 class="blog-post-title"><?php the_title(); ?></a></h2>
+		<?php elseif (is_page()) : ?>
+			<div class="entry clearfix"><?php the_content(); ?></div>
 		<?php endif; ?>
 		<?php if ( !get_the_title() ) : ?>
 		<p class="blog-post-meta"><span class="glyphicon glyphicon-calendar"></span> <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e( 'Permanent Link to ', 'bootstrapcanvaswp' ) . get_the_title() ? esc_attr( the_title_attribute() ) : esc_attr_e( '[No Title]', 'bootstrapcanvaswp' ); ?>"><?php the_time( $date_format ) ?></a> by <span class="glyphicon glyphicon-user"></span> <?php the_author_link() ?></p>
@@ -71,13 +78,8 @@
 		<?php if (is_single()): ?>
 			<p class="blog-post-meta">
 				<?php if ( is_single() ) : ?>
-				<span class="glyphicon glyphicon-folder-open"></span> Posted in <?php the_category(', ') ?> 
-				<strong>|</strong>
-				<?php endif; ?> 
-				<?php if ( is_user_logged_in() ) : ?>
-				<?php edit_post_link(__( 'Edit', 'bootstrapcanvaswp' ),'<span class="glyphicon glyphicon-pencil"></span> ','<strong> |</strong>'); ?> 
-				<?php endif; ?> 
-				<span class="glyphicon glyphicon-comment"></span> <?php comments_popup_link( __( 'No Comments', 'bootstrapcanvaswp' ), __( '1 Comment', 'bootstrapcanvaswp' ), __( '% Comments', 'bootstrapcanvaswp' ) ); ?>
+				<span class="glyphicon glyphicon-folder-open"></span> Categories: <?php the_category(', ') ?> 
+				<?php endif; ?>
 			</p>
 			<?php if ( has_tag() ) : ?>
 			  <p class="blog-post-meta"><span class="glyphicon glyphicon-tags"></span> <?php the_tags( __( 'Tags: ', 'bootstrapcanvaswp' ) ); ?></p>
@@ -91,7 +93,7 @@
 	  <?php endwhile; ?>
 
 	  <?php 
-	  global $wp_query; 
+	  global $wp_query;
 	  if ( $wp_query->max_num_pages > 1 ) : 
 	  ?>
 	  <nav>
