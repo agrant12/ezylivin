@@ -460,3 +460,47 @@ input[type="submit"] {
 #comments h3 {
 	font-weight: bold;
 }
+
+/* Subscribe Box */
+
+.subscribe-box {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 500;
+	text-align: center;
+	white-space: nowrap;
+	background: #333;
+	background: rgba(0,0,0,0.8);
+}
+
+.subscribe-box-content {
+	position: relative;
+	text-align: left;
+	vertical-align: middle;
+	display: inline-block;
+	overflow: auto;
+	padding: 25px 25px 0;
+	border-bottom: 25px solid transparent;
+	width: 30%;
+	margin-left: 5%;
+	margin-right: 5%;
+	max-height: 95%;
+	background: #fff;
+	cursor: auto;
+	text-decoration: left;
+	top: 50px;
+	white-space: normal;
+}
+
+.subscribe-box-content button.close a {
+	color: #000;
+}
+
+.subscribe-box-content .widget {
+	margin-top: 55px;
+	margin-bottom: 10px;
+}
