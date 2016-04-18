@@ -23,7 +23,6 @@
 	  $date_format = get_option( 'date_format' );
 	  ?>
 	  <div class="blog-post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	  	<?php if ( has_post_format( 'video' )) {} ?>
 		<!-- check if the post has a Post Thumbnail assigned to it. -->
 		<?php if ( is_singular() && has_post_thumbnail() ) : ?>
 			<h2 class="blog-post-title single-title"><?php the_title(); ?></a></h2>
@@ -34,16 +33,20 @@
 			</div>
 		<?php the_post_thumbnail( 'full' ); ?>
 		<?php elseif ( has_post_thumbnail() ) : ?>
+			<h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e( 'Permanent Link to ', 'bootstrapcanvaswp' ) . esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h2>
+			<hr style="margin:0px auto 10px; width:15%;" />
+			<div class="meta"><?php the_time( $date_format ) ?></div>
 			<a class="blog-image" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 				<?php the_post_thumbnail( 'full' ); ?>
 			</a>
 		<?php endif; ?>
 		<?php if ( !is_singular() ) : ?>
 			<div class="blogroll-info">
-				<span class="glyphicon front-glyphicon"><?php the_category(', ') ?></span>
-				<span class="category-underline"></span>
-				<h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e( 'Permanent Link to ', 'bootstrapcanvaswp' ) . esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h2>
+				<!--<span class="glyphicon front-glyphicon"><?php the_category(', ') ?></span>
+				<span class="category-underline"></span>-->
 				<?php get_template_part( 'excerpt', get_post_format() ); ?>
+				<hr style="margin-bottom:5px;" />
+				<div class="continue-reading"><a href="<?php the_permalink(); ?>">Continue Reading</a></div>
 			</div>
 		<?php elseif (is_page()) : ?>
 			<div class="entry clearfix"><?php the_content(); ?></div>

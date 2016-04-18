@@ -169,6 +169,16 @@ function bootstrapcanvaswp_widgets_init() {
         'before_title' => '<h4>',
         'after_title' => '</h4>',
     ) );
+
+    register_sidebar( array(
+        'name' => __( 'Lightbox Widget Area', 'bootstrapcanvaswp' ),
+        'id' => 'lightbox-widget-area',
+        'description' => __( 'Add widgets here to appear in your lightbox.', 'bootstrapcanvaswp' ),
+		'before_widget' => '<div id="%1$s" class="lightbox-module widget %2$s">',
+		'after_widget'  => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+    ) );
 	
 	// Area 2, located in the footer. Empty by default.
 	register_sidebar( array(
