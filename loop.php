@@ -45,7 +45,8 @@
 				<!--<span class="glyphicon front-glyphicon"><?php the_category(', ') ?></span>
 				<span class="category-underline"></span>-->
 				<?php get_template_part( 'excerpt', get_post_format() ); ?>
-				<hr />
+				<hr style="margin-bottom:5px;" />
+				<div class="continue-reading"><a href="<?php the_permalink(); ?>">Continue Reading</a></div>
 			</div>
 		<?php elseif (is_page()) : ?>
 			<div class="entry clearfix"><?php the_content(); ?></div>
