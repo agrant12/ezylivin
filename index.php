@@ -13,17 +13,13 @@
  */
 
 	get_header(); ?>
+	<?php carousel(); ?>
+	<div class="row">
+		<div class="col-sm-8 blog-main">
+			<p class="blogroll-title">Latest Articles</p>
+			<?php get_template_part( 'loop', 'index' ); ?>
+		</div><!-- /.blog-main -->
+		<?php get_sidebar(); ?>
+	</div><!-- /.row -->
 
-      <div class="row">
-
-        <div class="col-sm-8 blog-main">
-
-          <?php get_template_part( 'loop', 'index' ); ?>
-
-        </div><!-- /.blog-main -->
-
-        <?php get_sidebar(); ?>
-
-      </div><!-- /.row -->
-      
-	<?php get_footer(); ?>
+<?php get_footer(); ?>
