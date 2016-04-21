@@ -32,7 +32,7 @@
 				<span class="glyphicon"></span> <?php comments_popup_link( __( 'No Comments', 'bootstrapcanvaswp' ), __( '1 Comment', 'bootstrapcanvaswp' ), __( '% Comments', 'bootstrapcanvaswp' ) ); ?>
 			</div>
 		<?php the_post_thumbnail( 'full' ); ?>
-		<?php elseif ( has_post_thumbnail() ) : ?>
+		<?php else: ?>
 			<h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e( 'Permanent Link to ', 'bootstrapcanvaswp' ) . esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h2>
 			<hr style="margin:0px auto 10px; width:15%;" />
 			<div class="meta"><?php the_time( $date_format ) ?></div>
@@ -42,11 +42,10 @@
 		<?php endif; ?>
 		<?php if ( !is_singular() ) : ?>
 			<div class="blogroll-info">
-				<!--<span class="glyphicon front-glyphicon"><?php the_category(', ') ?></span>
-				<span class="category-underline"></span>-->
 				<?php get_template_part( 'excerpt', get_post_format() ); ?>
 				<hr style="margin-bottom:5px;" />
 				<div class="continue-reading"><a href="<?php the_permalink(); ?>">Continue Reading</a></div>
+				<span class="comment-home"> <?php comments_popup_link( __( 'No Comments', 'bootstrapcanvaswp' ), __( '1 Comment', 'bootstrapcanvaswp' ), __( '% Comments', 'bootstrapcanvaswp' ) ); ?></span>
 			</div>
 		<?php elseif (is_page()) : ?>
 			<div class="entry clearfix"><?php the_content(); ?></div>
@@ -54,8 +53,6 @@
 		<?php if ( !get_the_title() ) : ?>
 		<p class="blog-post-meta"><span class="glyphicon glyphicon-calendar"></span> <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e( 'Permanent Link to ', 'bootstrapcanvaswp' ) . get_the_title() ? esc_attr( the_title_attribute() ) : esc_attr_e( '[No Title]', 'bootstrapcanvaswp' ); ?>"><?php the_time( $date_format ) ?></a> by <span class="glyphicon glyphicon-user"></span> <?php the_author_link() ?></p>
 		<?php else : ?>
-		<!--<p class="blog-post-meta"><span class="glyphicon glyphicon-calendar"></span> <?php the_time( $date_format ) ?> by <span class="glyphicon glyphicon-user"></span> <?php the_author_link() ?></p>
-		<?php endif; ?> -->
 
 		<?php 
 		/* Include the post format-specific template for the content. If you want to
