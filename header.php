@@ -76,5 +76,7 @@
         <?php endif; ?>
       </div>
     </div>
-    
+    <?php if (is_home()) : ?>
+      <div class="container mobile-container"><?php carousel(); ?></div>
+    <?php endif; ?>
     <div class="container">

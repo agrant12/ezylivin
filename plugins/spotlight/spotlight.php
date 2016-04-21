@@ -53,10 +53,11 @@ function carousel() {
 					<li>
 						<div class="slide_content">
 							<div class="slide_info">
-								<a class="title_slide" href="<?php the_permalink($slide); ?>"><p class="slide_title"><?php echo esc_html($post->post_title); ?></p></a>
+								<div class="overlay">
+									<a class="title_slide" href="<?php the_permalink($slide); ?>"><p class="slide_title"><?php echo esc_html($post->post_title); ?></p></a>
+								</div>
 								<div class="read-more"><a href="<?php echo the_permalink($slide); ?>">Read More</a></div>
 							</div>
-							<div class="overlay"><a href="<?php the_permalink($slide); ?>"></a></div>
 							<a href="<?php the_permalink($slide); ?>"><img src="<?php echo esc_url($image[0]); ?>" /></a>
 						</div>
 					</li>

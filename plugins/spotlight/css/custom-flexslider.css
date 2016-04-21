@@ -1,17 +1,18 @@
 .flexslider {
+	position: relative;
 	border: none;
 	height: 500px;
 	overflow: hidden;
 }
 
 .overlay {
-	background-color: black;
-	height: 100%;
-	opacity: 0.3;
-	filter: alpha(opacity=30);
+	background-color: rgba(0,0,0,0.50);
+	left: 50px;
+	margin: 0 auto 5px;
+	padding: 10px;
 	position: absolute;
-	width: 100%;
-	z-index: 5;
+	top: 150px;
+	//z-index: 5;
 }
 
 .overlay a {
@@ -34,9 +35,12 @@
 
 .slide_info .read-more {
 	background-color: #dbbdba;
-	margin: 0 auto;
+	left: 50px;
+	padding: 3px 5px;
+	position: absolute;
 	text-transform: uppercase;
-	width: 90px;
+	top: 210px;
+	width: auto;
 }
 
 .slide_info .read-more a {
@@ -45,10 +49,9 @@
 
 .slide_title {
 	color: white;
-	font-size: 50px;
+	font-size: 1.8em;
 	margin: 0 auto;
 	text-transform: uppercase;
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 a.title_slide:hover {
@@ -58,4 +61,50 @@ a.title_slide:hover {
 .flex-direction-nav a:before {
 	color: white;
 	font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+	.flexslider {
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.slide_info {
+		top: 100px;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.slide_info {
+		top: 50px;
+	}
+}
+
+@media screen and (max-width: 435px) {
+	.slide_info {
+		top: 20px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.slide_info {
+		top: 0px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.slide_info {
+		top: -10px;
+	}
+} 
+
+@media screen and (max-width: 320px) {
+	.slide_info {
+		top: -60px;
+	}
+
+	.slide_title {
+		font-size: 1.5em;
+	}
 }
