@@ -179,6 +179,16 @@ function bootstrapcanvaswp_widgets_init() {
         'before_title' => '<h4>',
         'after_title' => '</h4>',
     ) );
+
+    register_sidebar( array(
+        'name' => __( 'Above Footer Widget', 'bootstrapcanvaswp' ),
+        'id' => 'above-footer-widget',
+        'description' => __( 'Add widgets here to appear in your above footer.', 'bootstrapcanvaswp' ),
+		'before_widget' => '<div id="%1$s" class="above-module widget %2$s">',
+		'after_widget'  => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+    ) );
 	
 	// Area 2, located in the footer. Empty by default.
 	register_sidebar( array(

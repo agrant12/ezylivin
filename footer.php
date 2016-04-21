@@ -10,7 +10,7 @@
  */
 ?>
 	</div><!-- /.container -->
-
+	<div class="container"><?php dynamic_sidebar( 'above-footer-widget' ); ?></div>
 	<div class="blog-footer">
 	
 	  <?php get_sidebar( 'footer' ); ?>
