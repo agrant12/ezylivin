@@ -200,7 +200,7 @@ a img.aligncenter {
 .blogroll-info {
 	color: #999;
 	margin: 20px auto;
-	width: 80%;
+	width: 100%;
 }
 
 /* Read More Button */
@@ -390,13 +390,28 @@ body {
 }
 
 .continue-reading {
+	border: 1px solid #dbbdba;
 	font-size: 13px;
+	margin: 0 auto;
+	padding: 5px;
 	text-align: center;
 	text-transform: uppercase;
+	width: 150px;
 }
 
 .continue-reading a {
 	color: #666;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.continue-reading {
+	margin-top: 50px;
+}
+
+.comment-home {
+
 }
 
 /* Category Page */
@@ -523,6 +538,7 @@ input[type="submit"] {
 }
 
 .comment-home {
+	float: right;
 	font-size: 13px;
 	position: relative;
 	top: -30px;
@@ -531,9 +547,15 @@ input[type="submit"] {
 	color: #666;
 }
 
+div.sharedaddy {
+	float: left;
+}
+
 /* Twitter Widget */
 .widget_twitter li {
+	border-left: 2px solid #dbbdba;
 	font-size: 12px;
+	padding-left: 5px;
 	margin-bottom: 10px;
 }
 
@@ -542,13 +564,18 @@ input[type="submit"] {
 	margin-right: 3px;
 }
 
-@media screen and (max-width: 768px) {
-	.container {
+/* Newsletter */
+.jetpack_subscription_widget p {
+	font-size: 12px;
+}
+
+@media screen and (max-width: 960px) {
+	.container, .blog-sidebar {
 		width: 100%;
 	}
-	.blog-sidebar {
-		display: none;
-	}
+}
+
+@media screen and (max-width: 768px) {
 	.col-sm-8 {
 		width: 100%;
 	}
@@ -581,7 +608,7 @@ input[type="submit"] {
 		width: 100%;
 	}
 	.comment-home {
-		display: none;
+		float: none;
 	}
 }
 
